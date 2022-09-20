@@ -1,9 +1,5 @@
-const player = {
-    name: 'sehun',
-    sayHello: function (otherPersonsName) {
-        console.log('Como Estas ' + otherPersonsName + ' hola ');
-    },
-};
+let person = { fname: 'JOHN', lname: 'Doe', age: 25 };
 
-console.log(player.name);
-player.sayHello('savage');
+for (const key in person) {
+    console.log(person[key]);
+}
