@@ -1,9 +1,12 @@
-const loginInput = document.querySelector('#login-form input');
-const loginButton = document.querySelector('#login-form button');
+let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-function handleLoginBtnClick() {
-    console.log(loginInput.value);
-    console.log('click!!');
-}
+words.filter((element, index, thisArg) => {
+    console.log(element, index, thisArg);
+});
 
-loginButton.addEventListener('click', handleLoginBtnClick);
+let result = words.filter(function (a) {
+    console.log(a);
+    return a.length > 6;
+});
+
+console.log(result);
