@@ -22,6 +22,33 @@ function handleMouseLeave() {
     title.style.color = 'mouse is gone!';
 }
 
-title.addEventListener('click', handleTitleClick);
-title.addEventListener('mouseenter', handleMouseEnter);
-title.addEventListener('mouseleave', handleThandleMouseLeave);
+function handleWindowResize() {
+    document.body.style.backgroundColor = 'tomato';
+}
+
+function handleWindowCopy() {
+    alert('copier');
+}
+
+function handleWindowOffline() {
+    alert('SOS!');
+}
+
+function handleWindowOnline() {
+    alert('all Good!');
+}
+
+// title.addEventListener('click', handleTitleClick);
+title.onclick = handleTitleClick;
+// title.addEventListener('mouseenter', handleMouseEnter);
+title.onmouseenter = handleMouseEnter;
+// title.addEventListener('mouseleave', handleThandleMouseLeave);
+title.onmouseleave = handleThandleMouseLeave;
+
+// addEventListener 는 .removeEventListener로 나중에 삭제 할 수 있기 때문에
+// addEventListener 를 더 선호함
+
+window.addEventListener('reseize', handleWindowResize);
+window.addEventListener('copy', handleWindowCopy);
+window.addEventListener('offline', handleWindowOffline);
+window.addEventListener('online', handleWindowOnline);
